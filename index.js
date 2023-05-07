@@ -39,6 +39,7 @@ let logosArray = [
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
+   
 })
 
 
@@ -97,7 +98,7 @@ function btnDisableToggle (){
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
-    item.setAttribute("id",logosArray[i].id)
+   
 })
 
 upLogos.map(item=> item.classList.remove("up-row-spin"))
