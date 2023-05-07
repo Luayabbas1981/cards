@@ -49,6 +49,7 @@ body {
 }
 @media (max-width: 767px) {
   .logos-con {
+    margin: auto 12px;
     height: 20vh;
   }
 }
@@ -75,6 +76,10 @@ body {
   .logos-con .up-logos-con div img {
     scale: 1.2;
   }
+}
+
+.up-row-spin {
+  animation: up-row-spin 0.3s 8 linear, up-row-position 4s ease-out forwards;
 }
 
 .down-logos-con {
@@ -158,10 +163,6 @@ p {
   }
 }
 
-.up-row-spin {
-  animation: up-row-spin 0.3s 8 linear, up-row-position 4s ease-out forwards;
-}
-
 @media (max-width: 767px) {
   .result {
     margin-top: 20px;
@@ -188,21 +189,19 @@ p {
 }
 @keyframes up-row-spin {
   from {
-    filter: blur(70px);
     rotate: y 0deg;
   }
   to {
-    filter: blur(0px);
     rotate: y 360deg;
   }
 }
 @keyframes up-row-position {
   from {
-    scale: 0.7;
+    filter: blur(4px);
     position: absolute;
   }
   to {
-    scale: 1;
+    filter: blur(0px);
     position: static;
   }
 }

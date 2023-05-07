@@ -42,10 +42,11 @@ body{
     }
 }
 .logos-con{
-    
+   
     height: 35vh;
     
     @media(max-width: 767px){
+        margin: auto 12px;
         height: 20vh;
     }
     div{
@@ -59,6 +60,7 @@ body{
             column-gap: 10px;
          }
         div{
+         
             @media(max-width: 767px){
                width: calc((100% - 40px) / 4);
             }
@@ -71,7 +73,9 @@ body{
         
 }
 }
-
+.up-row-spin{
+    animation: up-row-spin .3s 8 linear , up-row-position 4s ease-out forwards;
+}
 .down-logos-con{
     margin-top: 30px;
     display: flex;
@@ -147,13 +151,7 @@ p{
         scale: .7;
      }
 }
-.up-row-spin{
-    animation: up-row-spin .3s 8 linear , up-row-position 4s ease-out forwards;
-    
-         ;
-    
-  
-}
+
 .result{
     @media(max-width: 767px){
       margin-top: 20px;
@@ -181,22 +179,22 @@ p{
 @keyframes up-row-spin{
     from{
        
-        filter: blur(70px);
+       
        rotate: y 0deg;
     }
     to{
-        filter: blur(0px);
+      
        rotate: y 360deg;
     }
 }
 @keyframes up-row-position{
     from{
-      
-        scale: .7;
+        filter: blur(4px);
+       
         position: absolute;
     }
     to{
-        scale: 1;
+       filter: blur(0px);
         position: static;
     }
 }
