@@ -1,0 +1,206 @@
+
+:root{
+    --bg:#ddd;
+    @font-face {
+        font-family: "calculator";
+        src: url("../digital-7-font/Digital7Monoitalic-8xKz.ttf");
+      }
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bg);
+    overflow: hidden;
+    user-select: none;
+    perspective: 500px;
+}
+.brand{
+    position: relative;
+    margin: auto;
+    width: 250px;
+    height: 150px;
+   
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 23%;
+        left: 50%;
+        translate: -50%;
+        width: 100%;
+        height: 20px;
+        background-color:var(--bg);
+        
+    }
+    @media(max-width: 767px){
+        margin: 50px auto auto;
+        width: 150px;
+        height: 100px;
+    }
+}
+.logos-con{
+    height: 35vh;
+    @media(max-width: 767px){
+        height: 20vh;
+    }
+    div{
+        height: 100%;
+        
+    }
+
+}
+.up-logos-con{
+
+        animation:up-column-in  1s  ease-out forwards;
+    
+}
+.down-logos-con{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6%;
+    @media(max-width: 767px){
+        margin-top: 30px;
+        column-gap: 10%;
+    
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 100px;
+        translate: 0 200px;
+        rotate: x 360deg;
+        opacity: 0;
+        animation: down-column-come-up 1s 1.2s linear forwards;
+        @media(max-width: 767px){
+            width: 30px;
+        height: 20px;
+        }
+        &:nth-child(3){
+            width: 180px;
+            height:150px ;
+            @media(max-width: 767px){
+                width: 50px;
+            height: 30px;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
+p{
+    
+    text-align: center;
+    font-family: "calculator";
+    font-size: 22px;
+    opacity: 0;
+    animation:opacity 1s 2.5s linear forwards ;
+        @media(max-width: 767px){
+          
+           scale: .5;
+        }
+}
+.btns-con{
+    
+    button{
+        border: none;
+        opacity: 0;
+        animation:opacity 1s 2.5s linear forwards ;
+        
+        @media(max-width: 767px){
+           scale: .5;
+        }
+    }
+}
+.counter{
+
+    width: 50px;
+    height: 60px;
+    margin: auto;
+    background-color: #000;
+    font-family: "calculator";
+    font-size: 50px;
+    color: #00beff;
+    opacity: 0;
+    animation:opacity 1s 2.5s linear forwards ;
+    @media(max-width: 767px){
+        scale: .4;
+     }
+}
+.up-row-spin{
+    animation: up-row-spin .3s 8 linear , up-row-position 4s ease-out forwards;
+    
+         ;
+    
+  
+}
+.hidden{
+   display: none;
+}
+/* keyframes */
+
+/* up-row */
+
+@keyframes up-column-in {
+   from{
+   scale: 0 1;
+   }
+   to{
+   scale: 1;
+   }
+}
+
+@keyframes up-row-spin{
+    from{
+       
+        filter: blur(70px);
+       rotate: y 0deg;
+    }
+    to{
+        filter: blur(0px);
+       rotate: y 360deg;
+    }
+}
+@keyframes up-row-position{
+    from{
+      
+        scale: .7;
+        position: absolute;
+    }
+    to{
+        scale: 1;
+        position: static;
+    }
+}
+/* down-row */
+
+@keyframes down-column-come-up{
+   
+    to{
+        translate: 0 ;
+        rotate: x 0deg; 
+        opacity: 1;
+    }
+}
+
+
+/* Btns-con */
+
+@keyframes opacity{
+    to{
+        opacity: 1;
+    }
+    
+}
+/* Won  */
+
+
