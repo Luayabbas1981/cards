@@ -133,6 +133,7 @@ p {
   font-size: 27px;
   opacity: 0;
   animation: opacity 1s 2.5s linear forwards;
+  color: #004e73;
 }
 @media (max-width: 767px) {
   p {
