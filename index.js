@@ -3,7 +3,10 @@ const downLogos = Array.from(document.querySelectorAll(".down-logos-con > div"))
 const counter = document.querySelector(".counter")
 const startBtn = document.querySelector(".start-btn")
 const resetBtn = document.querySelector(".reset-btn")
-const description = document.querySelector("p")
+const description = document.querySelector(".description")
+const result = document.querySelector(".result")
+
+
 let logosArray = [
 
     {
@@ -99,10 +102,11 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
     if(i === 3){
 
         btnDisableToggle()
-        description.textContent=""
-        description.style.color="#9c27b0"
-        description.textContent="Super! you won"
+        description.classList.add("visibility")
+        result.style.color="#9c27b0"
+        result.textContent="Super! you won"
         startBtn.classList.add("hidden")
+        result.classList.add("won")
         return
     }
     i++
@@ -112,16 +116,16 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
 }
 
 verify()
-if(count !==0 || description.classList.contains("won")){
+if(count !==0 || result.classList.contains("won")){
     startBtn.disabled=false
     startBtn.style.backgroundColor="#0d6efd"
 }
-if(count === 0 && !description.classList.contains("won")){
+if(count === 0 && !result.classList.contains("won")){
     btnDisableToggle()
     setTimeout(() => {
-        description.textContent=""
-    description.textContent="Opps! Try again "
-    description.style.color="red"
+        description.classList.add("visibility")
+        result.style.color="red"
+        result.textContent="Opps! Try again "
     }, 1000);
     
 }

@@ -166,6 +166,10 @@ p {
   display: none;
 }
 
+.visibility {
+  visibility: hidden;
+}
+
 /* keyframes */
 /* up-row */
 @keyframes up-column-in {
