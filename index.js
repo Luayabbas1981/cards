@@ -127,7 +127,7 @@ if(count === 0 && !result.classList.contains("won")){
         description.classList.add("visibility")
         result.style.color="red"
         result.textContent="Opps! Try again "
-    }, 1000);
+    }, 700);
     
 }
 },1000)
