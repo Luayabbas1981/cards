@@ -141,6 +141,10 @@ p {
   }
 }
 
+.result {
+  font-size: 34px;
+}
+
 .btns-con button {
   border: none;
   opacity: 0;
