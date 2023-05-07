@@ -123,6 +123,7 @@ if(count !==0 || result.classList.contains("won")){
 if(count === 0 && !result.classList.contains("won")){
     btnDisableToggle()
     setTimeout(() => {
+        startBtn.classList.add("hidden")
         description.classList.add("visibility")
         result.style.color="red"
         result.textContent="Opps! Try again "

@@ -49,6 +49,7 @@ body {
 }
 @media (max-width: 767px) {
   .logos-con {
+    margin-left: 12px;
     height: 20vh;
   }
 }
