@@ -134,8 +134,7 @@ if(count === 0 && !result.classList.contains("won")){
         description.classList.add("hidden")
         result.style.color="red"
         result.textContent="Opps! Try again "
-    }, 700);
-    
+    }, 700); 
 }
 
 },1000)
