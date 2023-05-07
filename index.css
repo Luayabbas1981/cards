@@ -165,7 +165,7 @@ p {
 
 @media (max-width: 767px) {
   .result {
-    margin-top: -50px;
+    margin-top: 20px;
   }
 }
 
