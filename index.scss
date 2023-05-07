@@ -46,7 +46,7 @@ body{
     height: 35vh;
     
     @media(max-width: 767px){
-        margin: auto 12px;
+       
         height: 20vh;
     }
     div{
@@ -54,11 +54,13 @@ body{
         
     }
     .up-logos-con{
+
         column-gap: 3%;
         animation:up-column-in  1s  ease-out forwards;
         @media(max-width: 767px){
             column-gap: 10px;
          }
+         
         div{
          
             @media(max-width: 767px){
@@ -101,8 +103,8 @@ body{
             width: 180px;
             height:150px ;
             @media(max-width: 767px){
-                width: 50px;
-            height: 30px;
+                width: 70px;
+                 height: 70px;
             }
         }
         img{
