@@ -11,21 +11,25 @@ let logosArray = [
 
     {
         img:"./imgs/camel-blue.png",
-        bc:"#ffe70de0"
+        bc:"#ffe70de0",
+        id:"camel"
     }
     , 
     {
         img:"./imgs/Winston-blue.png",
-        bc:"#eee"
+        bc:"#eee",
+        id:"w-blue"
     }
     , 
     {
         img:"./imgs/american-spirit.svg",
-        bc:"#2196f3"
+        bc:"#2196f3",
+        id:"spirit"
     } , 
     {
         img:"./imgs/Winston-red.png",
-        bc:"#eee"
+        bc:"#eee",
+        id:"w-red"
     }
     
 ]
@@ -93,6 +97,7 @@ function btnDisableToggle (){
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
+    item.setAttribute("id",logosArray[i].id)
 })
 
 upLogos.map(item=> item.classList.remove("up-row-spin"))
@@ -132,8 +137,8 @@ if(count === 0 && !result.classList.contains("won")){
     }, 700);
     
 }
-},1000)
 
+},1000)
 
 }
 
