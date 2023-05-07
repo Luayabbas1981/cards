@@ -130,7 +130,7 @@ body {
 p {
   text-align: center;
   font-family: "calculator";
-  font-size: 22px;
+  font-size: 27px;
   opacity: 0;
   animation: opacity 1s 2.5s linear forwards;
 }
