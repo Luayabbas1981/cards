@@ -86,11 +86,11 @@ function btnDisableToggle (){
 
     setTimeout(()=>{
         logosArray.sort(()=> Math.random()- 0.5)
-    if(upLogos[0].img === downLogos[0].img && count>= 3){
+    if(upLogos[0].id === downLogos[0].id && count>= 3){
         logosArray.sort(()=> Math.random()- 0.5)
        
     }
-    if(upLogos[0].img === downLogos[0].img && count>= 3){
+    if(upLogos[0].id === downLogos[0].id && count>= 3){
         logosArray.sort(()=> Math.random()- 0.5)
        
     } 
