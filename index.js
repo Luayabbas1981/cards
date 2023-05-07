@@ -102,7 +102,7 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
     if(i === 3){
 
         btnDisableToggle()
-        description.classList.add("visibility")
+        description.classList.add("hidden")
         result.style.color="#9c27b0"
         result.textContent="Super! you won"
         startBtn.classList.add("hidden")
@@ -124,7 +124,7 @@ if(count === 0 && !result.classList.contains("won")){
     btnDisableToggle()
     setTimeout(() => {
         startBtn.classList.add("hidden")
-        description.classList.add("visibility")
+        description.classList.add("hidden")
         result.style.color="red"
         result.textContent="Opps! Try again "
     }, 700);
