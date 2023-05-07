@@ -77,11 +77,6 @@ body {
     scale: 1.2;
   }
 }
-@media (max-width: 767px) {
-  .logos-con .up-logos-con div:nth-child(3) img {
-    scale: 1.4;
-  }
-}
 
 .up-row-spin {
   animation: up-row-spin 0.3s 8 linear, up-row-position 4s ease-out forwards;

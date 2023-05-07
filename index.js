@@ -88,6 +88,8 @@ function btnDisableToggle (){
         logosArray.sort(()=> Math.random()- 0.5)
        
     } 
+   
+   
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
