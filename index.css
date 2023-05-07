@@ -3,7 +3,7 @@
 }
 @font-face {
   font-family: "calculator";
-  src: url("./digital-7-font/Digital7Italic-RBM3.ttf");
+  src: url("./digital-7-font/Digital7Monoitalic-8xKz.ttf");
 }
 
 body {
@@ -29,7 +29,7 @@ body {
 .brand::after {
   content: "";
   position: absolute;
-  bottom: 23%;
+  bottom: 20%;
   left: 50%;
   translate: -50%;
   width: 100%;
@@ -38,9 +38,9 @@ body {
 }
 @media (max-width: 767px) {
   .brand {
-    margin: 50px auto auto;
-    width: 150px;
-    height: 100px;
+    margin: 20px auto auto;
+    width: 140px;
+    height: 90px;
   }
 }
 
@@ -55,9 +55,26 @@ body {
 .logos-con div {
   height: 100%;
 }
-
-.up-logos-con {
+.logos-con .up-logos-con {
+  -moz-column-gap: 3%;
+       column-gap: 3%;
   animation: up-column-in 1s ease-out forwards;
+}
+@media (max-width: 767px) {
+  .logos-con .up-logos-con {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .logos-con .up-logos-con div {
+    width: calc((100% - 40px) / 4);
+  }
+}
+@media (max-width: 767px) {
+  .logos-con .up-logos-con div img {
+    scale: 1.2;
+  }
 }
 
 .down-logos-con {
@@ -67,13 +84,6 @@ body {
   align-items: center;
   -moz-column-gap: 6%;
        column-gap: 6%;
-}
-@media (max-width: 767px) {
-  .down-logos-con {
-    margin-top: 30px;
-    -moz-column-gap: 10%;
-         column-gap: 10%;
-  }
 }
 .down-logos-con div {
   display: flex;
@@ -88,8 +98,8 @@ body {
 }
 @media (max-width: 767px) {
   .down-logos-con div {
-    width: 30px;
-    height: 20px;
+    width: 50px;
+    height: 40px;
   }
 }
 .down-logos-con div:nth-child(3) {
@@ -116,7 +126,7 @@ p {
 }
 @media (max-width: 767px) {
   p {
-    scale: 0.5;
+    scale: 0.7;
   }
 }
 
@@ -127,7 +137,7 @@ p {
 }
 @media (max-width: 767px) {
   .btns-con button {
-    scale: 0.5;
+    scale: 0.8;
   }
 }
 
@@ -144,7 +154,7 @@ p {
 }
 @media (max-width: 767px) {
   .counter {
-    scale: 0.4;
+    scale: 0.7;
   }
 }
 
