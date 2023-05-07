@@ -50,7 +50,7 @@ downLogos.map((item,i)=>{
 let count = 4
 counter.textContent= count 
 
-function changeSort (){
+function startGame (){
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
     resetBtn.disabled= true
