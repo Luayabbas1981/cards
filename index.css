@@ -18,7 +18,7 @@ body {
 
 .brand {
   position: relative;
-  margin: 15px auto auto;
+  margin: auto;
   width: 250px;
   height: 150px;
 }
@@ -41,6 +41,11 @@ body {
     margin: 20px auto auto;
     width: 140px;
     height: 90px;
+  }
+}
+@media (min-width: 800px) {
+  .brand {
+    margin: 20px auto auto;
   }
 }
 
