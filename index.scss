@@ -111,7 +111,7 @@ body{
         height: 100px;
         translate: 0 200px;
         opacity: 0;
-        filter: blur(10px);
+        filter: blur(13px);
         animation: down-column-come-up 1s 1.2s linear forwards;
         @media(max-width: 767px){
             width: 50px;
