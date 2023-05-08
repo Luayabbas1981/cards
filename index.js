@@ -94,7 +94,7 @@ function btnDisableToggle (){
 
            logosArray.sort(()=> Math.random()- 0.5)
            x++
-           console.log(x)
+           /* console.log(x) */
        }
    
 upLogos.map((item,i)=>{
