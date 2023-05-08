@@ -236,10 +236,10 @@ p {
   outline: none;
 }
 .speaker button:first-child {
-  color: red;
+  color: #025fff;
 }
 .speaker button:last-child {
-  color: #025fff;
+  color: red;
 }
 
 .hidden {

@@ -16,6 +16,7 @@ sound.muted=true
 play.classList.add("hidden")
 
 /* logos array */
+
 let logosArray = [
 
     {
