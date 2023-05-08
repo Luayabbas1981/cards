@@ -20,17 +20,17 @@ let logosArray = [
         bc:"#eee",
         id:"w-blue"
     }
-    , 
-    {
-        img:"./imgs/american-spirit.svg",
-        bc:"#2196f3",
-        id:"spirit"
-    } , 
+    ,  
     {
         img:"./imgs/Winston-red.png",
         bc:"#eee",
         id:"w-red"
-    }
+    },
+    {
+        img:"./imgs/american-spirit.svg",
+        bc:"#2196f3",
+        id:"spirit"
+    } 
     
 ]
 

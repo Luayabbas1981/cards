@@ -112,12 +112,12 @@ body {
     height: 40px;
   }
 }
-.down-logos-con div:nth-child(3) {
+.down-logos-con div:nth-child(4) {
   width: 180px;
   height: 150px;
 }
 @media (max-width: 767px) {
-  .down-logos-con div:nth-child(3) {
+  .down-logos-con div:nth-child(4) {
     width: 70px;
     height: 70px;
   }
