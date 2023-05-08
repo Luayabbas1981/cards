@@ -5,6 +5,7 @@ const startBtn = document.querySelector(".start-btn")
 const resetBtn = document.querySelector(".reset-btn")
 const description = document.querySelector(".description")
 const result = document.querySelector(".result")
+const sound = document.querySelector("audio")
 
 
 let logosArray = [
@@ -57,6 +58,10 @@ let count = 4
 counter.textContent= count 
 
 function startGame (){
+    function playAudio(){
+        sound.play()
+    }
+    playAudio()
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
     upLogos.map(item=> item.classList.add("up-row-spin"))
