@@ -48,7 +48,7 @@ upLogos.map((item,i)=>{
 downLogos.map((item,i)=>{
     
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
-   
+    item.setAttribute("id",logosArray[i].id)
     
 })
 
@@ -59,9 +59,9 @@ counter.textContent= count
 
 function startGame (){
     function playAudio(){
-        sound.play()
-    }
-    playAudio()
+    sound.play()
+}
+playAudio()
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
     upLogos.map(item=> item.classList.add("up-row-spin"))
@@ -88,15 +88,14 @@ function btnDisableToggle (){
 
     setTimeout(()=>{
         logosArray.sort(()=> Math.random()- 0.5)
-    if(upLogos[0].id === downLogos[0].id && count>= 3){
-        logosArray.sort(()=> Math.random()- 0.5)
-       
-    }
-    if(upLogos[0].id === downLogos[0].id && count>= 3){
-        logosArray.sort(()=> Math.random()- 0.5)
-       
-    } 
-   
+
+       let x = 0
+       while(logosArray[0].id === downLogos[0].id && count>= 3 && x<=10){
+
+           logosArray.sort(()=> Math.random()- 0.5)
+           x++
+           console.log(x)
+       }
    
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
