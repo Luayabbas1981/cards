@@ -123,6 +123,7 @@ body {
   height: 100px;
   translate: 0 200px;
   opacity: 0;
+  filter: blur(10px);
   animation: down-column-come-up 1s 1.2s linear forwards;
 }
 @media (max-width: 767px) {
@@ -250,6 +251,7 @@ p {
   to {
     translate: 0;
     opacity: 1;
+    filter: blur(0px);
   }
 }
 /* Btns-con */
