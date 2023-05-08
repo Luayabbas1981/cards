@@ -214,6 +214,28 @@ p {
   }
 }
 
+.speaker {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+@media (min-width: 1200px) {
+  .speaker {
+    left: 10%;
+  }
+}
+.speaker button {
+  position: absolute;
+  border: none;
+  outline: none;
+}
+.speaker button:first-child {
+  color: red;
+}
+.speaker button:last-child {
+  color: #025fff;
+}
+
 .hidden {
   display: none;
 }

@@ -6,6 +6,13 @@ const resetBtn = document.querySelector(".reset-btn")
 const description = document.querySelector(".description")
 const result = document.querySelector(".result")
 const sound = document.querySelector("audio")
+const mute = document.querySelector(".mute")
+const play = document.querySelector(".play")
+
+
+/* init values */
+resetBtn.classList.add("hidden")
+
 
 
 let logosArray = [
@@ -35,8 +42,6 @@ let logosArray = [
     
 ]
 
-
-resetBtn.classList.add("hidden")
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
@@ -150,3 +155,13 @@ function reset (){
     location.reload()
 }
 
+function pauseSound(){
+    sound.muted= true
+    play.classList.add("hidden")
+    mute.classList.remove("hidden")
+}
+function playSound(){
+    sound.muted= false
+    mute.classList.add("hidden")
+    play.classList.remove("hidden")
+}
