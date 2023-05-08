@@ -35,7 +35,7 @@ let logosArray = [
 ]
 
 
-
+resetBtn.classList.add("hidden")
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
@@ -59,8 +59,6 @@ counter.textContent= count
 function startGame (){
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
-    resetBtn.disabled= true
-    resetBtn.style.backgroundColor="#aaa"
     upLogos.map(item=> item.classList.add("up-row-spin"))
     
     if(count>0 ){
@@ -77,8 +75,7 @@ function startGame (){
 function btnDisableToggle (){
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
-    resetBtn.disabled= false
-    resetBtn.style.backgroundColor="#ffc107"
+
 }
     
    
@@ -116,6 +113,7 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
         result.textContent="Super! you won"
         startBtn.classList.add("hidden")
         result.classList.add("won")
+        resetBtn.classList.remove("hidden")
         return
     }
     i++
@@ -132,6 +130,7 @@ if(count !==0 || result.classList.contains("won")){
 if(count === 0 && !result.classList.contains("won")){
     btnDisableToggle()
     setTimeout(() => {
+        resetBtn.classList.remove("hidden")
         startBtn.classList.add("hidden")
         description.classList.add("hidden")
         result.style.color="red"
