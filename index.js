@@ -12,9 +12,10 @@ const play = document.querySelector(".play")
 
 /* init values */
 resetBtn.classList.add("hidden")
+sound.muted=true
+play.classList.add("hidden")
 
-
-
+/* logos array */
 let logosArray = [
 
     {
