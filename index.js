@@ -105,7 +105,7 @@ upLogos.map((item,i)=>{
 
 upLogos.map(item=> item.classList.remove("up-row-spin"))
 
-i=0
+let i=0
 function verify (){
 while(upLogos[i].children[0].src === downLogos[i].children[0].src){
     
