@@ -9,6 +9,7 @@ const sound = document.querySelector(".cards-sound")
 const sound2 = document.querySelector(".wow")
 const mute = document.querySelector(".mute")
 const play = document.querySelector(".play")
+const loseSound = document.querySelector(".lose")
 const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 
 /* init values */
@@ -167,6 +168,10 @@ if(count === 0 && !result.classList.contains("won")){
         result.style.color="red"
         result.textContent="Opps! Try again "
     }, 700); 
+    function lose(){
+        loseSound.play()
+    }
+    lose()
 }
 
 },1000)
@@ -182,6 +187,7 @@ function playSound(){
 function muteSound(){
     sound.muted= true
     sound2.muted=true
+    loseSound.muted=true
     mute.classList.add("hidden")
     play.classList.remove("hidden")
 }
