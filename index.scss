@@ -225,7 +225,7 @@ button{
     
 }
 }
-.stars{animation: stars .8s 8 forwards, stars-stop 1s 1s forwards;}
+.stars{animation: stars .8s 8 forwards infinite;}
 
 
 .result{
@@ -325,11 +325,5 @@ button{
     to{
         opacity: 1;
         scale: 2.5;
-    }
-}
-@keyframes stars-stop{
-    to{
-        opacity: 1;
-        color: #00beff;
     }
 }
