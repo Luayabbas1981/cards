@@ -44,6 +44,7 @@ let logosArray = [
     
 ]
 
+/* set up cards */
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
@@ -51,7 +52,7 @@ upLogos.map((item,i)=>{
    
 })
 
-
+/* set down cards */
 downLogos.map((item,i)=>{
     
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
@@ -60,17 +61,21 @@ downLogos.map((item,i)=>{
 })
 
 
-
+/* set counter init value */
 let count = 4
 counter.textContent= count 
 
+/* primary function */
+
 function startGame (){
 
-   
+    /* cards sound */
     function playAudio(){
     sound.play()
 }
 playAudio()
+
+
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
     upLogos.map(item=> item.classList.add("up-row-spin"))
@@ -86,18 +91,22 @@ playAudio()
     }
 
     count--
+
 function btnDisableToggle (){
     startBtn.disabled=true
     startBtn.style.backgroundColor="#aaa"
 
 }
     
-   
+   /* counter numbers colors */
     count ===3?counter.style.color="#8aff02":count ===2?counter.style.color="yellow":count ===1?counter.style.color="red":counter.style.color="white"
+
+    /* sort up cards */
 
     setTimeout(()=>{
         logosArray.sort(()=> Math.random()- 0.5)
-
+         
+        /* verify first click */
        let x = 0
        while(logosArray[0].id === downLogos[0].id && count>= 3 && x<=10){
 
@@ -106,6 +115,7 @@ function btnDisableToggle (){
            /* console.log(x) */
        }
    
+       /* set cards values */
 upLogos.map((item,i)=>{
     item.innerHTML=` <img src=${logosArray[i].img} class="img-fluid" alt="">`
     item.style.backgroundColor= `${logosArray[i].bc}`
@@ -114,6 +124,7 @@ upLogos.map((item,i)=>{
 
 upLogos.map(item=> item.classList.remove("up-row-spin"))
 
+/* verify win */
 let i=0
 function verify (){
 while(upLogos[i].children[0].src === downLogos[i].children[0].src){
@@ -141,6 +152,8 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
 }
 
 verify()
+
+/* last conditions */
 if(count !==0 || result.classList.contains("won")){
     startBtn.disabled=false
     startBtn.style.backgroundColor="#0d6efd"

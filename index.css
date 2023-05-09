@@ -239,7 +239,7 @@ p {
 }
 
 .stars {
-  animation: stars 0.8s 8 forwards infinite;
+  animation: stars 0.6s alternate infinite;
 }
 
 @media (max-width: 767px) {
