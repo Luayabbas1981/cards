@@ -13,7 +13,6 @@ const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 
 /* init values */
 resetBtn.classList.add("hidden")
-sound.muted=true
 play.classList.add("hidden")
 
 /* logos array */
@@ -162,13 +161,14 @@ if(count === 0 && !result.classList.contains("won")){
 }
 /* sound functions */
 
-function pauseSound(){
-    sound.muted= true
+function playSound(){
+    sound.muted= false
     play.classList.add("hidden")
     mute.classList.remove("hidden")
 }
-function playSound(){
-    sound.muted= false
+function muteSound(){
+    sound.muted= true
+    sound2.muted=true
     mute.classList.add("hidden")
     play.classList.remove("hidden")
 }

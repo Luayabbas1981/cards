@@ -225,7 +225,7 @@ button{
     
 }
 }
-.stars{animation: stars .8s 8 forwards;}
+.stars{animation: stars .8s 8 forwards, stars-stop 1s 1s forwards;}
 
 
 .result{
@@ -249,12 +249,13 @@ button{
         position: absolute;
         border: none;
         outline: none;
+        background-color:var(--bg);
     }
     button:first-child{
-        color: #025fff;
+        color: red;
     }
     button:last-child{
-        color: red;
+        color: #025fff;
         
     }
 }
@@ -324,5 +325,11 @@ button{
     to{
         opacity: 1;
         scale: 2.5;
+    }
+}
+@keyframes stars-stop{
+    to{
+        opacity: 1;
+        color: #00beff;
     }
 }
