@@ -8,7 +8,7 @@ const result = document.querySelector(".result")
 const sound = document.querySelector("audio")
 const mute = document.querySelector(".mute")
 const play = document.querySelector(".play")
-
+const stars = document.querySelectorAll(".counter-starts-con > i")
 
 /* init values */
 resetBtn.classList.add("hidden")
@@ -125,6 +125,7 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
         startBtn.classList.add("hidden")
         result.classList.add("won")
         resetBtn.classList.remove("hidden")
+        stars.map(item=>item.classList.add("stars"))
         return
     }
     i++
@@ -152,10 +153,7 @@ if(count === 0 && !result.classList.contains("won")){
 },1000)
 
 }
-
-function reset (){
-    location.reload()
-}
+/* sound functions */
 
 function pauseSound(){
     sound.muted= true
@@ -167,3 +165,9 @@ function playSound(){
     mute.classList.add("hidden")
     play.classList.remove("hidden")
 }
+
+/* restart function */
+function reset (){
+    location.reload()
+}
+

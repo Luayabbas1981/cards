@@ -172,8 +172,39 @@ button{
 .reset-btn{
     opacity: 1;
 }
-.counter{
-
+.counter-starts-con{
+   position: relative;
+   width: 300px;
+   margin: auto;
+   
+   i{
+    position: absolute;
+    color: gold;
+    opacity: 0;
+    
+    
+   }
+   i:nth-child(1){
+    top: 22px;
+    left: 80px;
+   
+ }
+ i:nth-child(2){
+    top: 22px;
+    left: 30px;
+   
+ }
+ i:nth-child(4){
+    top: 22px;
+    right: 80px;
+   
+ }
+ i:nth-child(5){
+    top: 22px;
+   right: 30px;
+ }
+ .counter{
+    position: relative;
     width: 50px;
     height: 60px;
     margin: auto;
@@ -186,7 +217,15 @@ button{
     @media(max-width: 767px){
         scale: .7;
      }
+     div{
+        position: absolute;
+
+     }
+    
 }
+}
+.stars{animation: stars .7s 6;}
+
 
 .result{
     @media(max-width: 767px){
@@ -199,7 +238,7 @@ button{
     top: 20px;
     left: 30px;
     @media(max-width: 767px){
-        top: 10px;
+        top: 7px;
     left: 15px;
        }
     @media(min-width:1200px){
@@ -218,6 +257,7 @@ button{
         
     }
 }
+
 .hidden{
    display: none;
 }
@@ -279,4 +319,9 @@ button{
 }
 /* Won  */
 
-
+@keyframes stars {
+    to{
+        opacity: 1;
+        scale: 2.2;
+    }
+}
