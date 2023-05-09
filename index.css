@@ -262,6 +262,7 @@ p {
 @media (min-width: 1200px) {
   .speaker {
     left: 10%;
+    scale: 1.4;
   }
 }
 .speaker button {
