@@ -5,10 +5,11 @@ const startBtn = document.querySelector(".start-btn")
 const resetBtn = document.querySelector(".reset-btn")
 const description = document.querySelector(".description")
 const result = document.querySelector(".result")
-const sound = document.querySelector("audio")
+const sound = document.querySelector(".cards-sound")
+const sound2 = document.querySelector(".wow")
 const mute = document.querySelector(".mute")
 const play = document.querySelector(".play")
-const stars = document.querySelectorAll(".counter-starts-con > i")
+const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 
 /* init values */
 resetBtn.classList.add("hidden")
@@ -65,6 +66,8 @@ let count = 4
 counter.textContent= count 
 
 function startGame (){
+
+   
     function playAudio(){
     sound.play()
 }
@@ -126,6 +129,10 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
         result.classList.add("won")
         resetBtn.classList.remove("hidden")
         stars.map(item=>item.classList.add("stars"))
+        function wow(){
+            sound2.play()
+        }
+        wow()
         return
     }
     i++

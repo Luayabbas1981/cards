@@ -170,6 +170,7 @@ button{
     animation:opacity 1s 2.5s linear forwards ;
 }
 .reset-btn{
+
     opacity: 1;
 }
 .counter-starts-con{
@@ -224,7 +225,7 @@ button{
     
 }
 }
-.stars{animation: stars .7s 6;}
+.stars{animation: stars .8s 8;}
 
 
 .result{
@@ -322,6 +323,6 @@ button{
 @keyframes stars {
     to{
         opacity: 1;
-        scale: 2.2;
+        scale: 2.5;
     }
 }
