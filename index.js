@@ -5,11 +5,11 @@ const startBtn = document.querySelector(".start-btn")
 const resetBtn = document.querySelector(".reset-btn")
 const description = document.querySelector(".description")
 const result = document.querySelector(".result")
-const sound = document.querySelector(".cards-sound")
-const sound2 = document.querySelector(".wow")
 const mute = document.querySelector(".mute")
 const play = document.querySelector(".play")
-const loseSound = document.querySelector(".lose")
+const cardsSound = document.querySelector(".cards-sound")
+const wowSound = document.querySelector(".wow-sound")
+const loseSound = document.querySelector(".lose-sound")
 const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 
 /* init values */
@@ -72,7 +72,7 @@ function startGame (){
 
     /* cards sound */
     function playAudio(){
-    sound.play()
+    cardsSound.play()
 }
 playAudio()
 
@@ -141,7 +141,7 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
         resetBtn.classList.remove("hidden")
         stars.map(item=>item.classList.add("stars"))
         function wow(){
-            sound2.play()
+            wowSound.play()
         }
         wow()
         return
@@ -180,13 +180,13 @@ if(count === 0 && !result.classList.contains("won")){
 /* sound functions */
 
 function playSound(){
-    sound.muted= false
+    cardsSound.muted= false
     play.classList.add("hidden")
     mute.classList.remove("hidden")
 }
 function muteSound(){
-    sound.muted= true
-    sound2.muted=true
+    cardsSound.muted= true
+    wowSound.muted=true
     loseSound.muted=true
     mute.classList.add("hidden")
     play.classList.remove("hidden")
