@@ -8,7 +8,7 @@ const result = document.querySelector(".result")
 const mute = document.querySelector(".mute")
 const play = document.querySelector(".play")
 const cardsSound = document.querySelector(".cards-sound")
-const wowSound = document.querySelector(".wow-sound")
+const winSound = document.querySelector(".win-sound")
 const loseSound = document.querySelector(".lose-sound")
 const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 
@@ -141,7 +141,7 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
         resetBtn.classList.remove("hidden")
         stars.map(item=>item.classList.add("stars"))
         function wow(){
-            wowSound.play()
+            winSound.play()
         }
         wow()
         return
@@ -166,7 +166,7 @@ if(count === 0 && !result.classList.contains("won")){
         startBtn.classList.add("hidden")
         description.classList.add("hidden")
         result.style.color="red"
-        result.textContent="Opps! Try again "
+        result.textContent="Oops! Try again "
     }, 700); 
     function lose(){
         loseSound.play()
@@ -186,7 +186,7 @@ function playSound(){
 }
 function muteSound(){
     cardsSound.muted= true
-    wowSound.muted=true
+    winSound.muted=true
     loseSound.muted=true
     mute.classList.add("hidden")
     play.classList.remove("hidden")
