@@ -15,7 +15,7 @@ const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 /* init values */
 resetBtn.classList.add("hidden")
 play.classList.add("hidden")
-
+cardsSound.volume=0.3
 /* logos array */
 
 let logosArray = [
