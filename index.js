@@ -5,19 +5,23 @@ const startBtn = document.querySelector(".start-btn")
 const resetBtn = document.querySelector(".reset-btn")
 const description = document.querySelector(".description")
 const result = document.querySelector(".result")
+const speaker = document.querySelector(".speaker")
 const mute = document.querySelector(".mute")
 const play = document.querySelector(".play")
 const cardsSound = document.querySelector(".cards-sound")
 const winSound = document.querySelector(".win-sound")
 const loseSound = document.querySelector(".lose-sound")
+const range = document.querySelector(".range")
 const stars = Array.from(document.querySelectorAll(".counter-starts-con > i"))
 
 /* init values */
 resetBtn.classList.add("hidden")
 play.classList.add("hidden")
-cardsSound.volume=0.3
+cardsSound.volume=0.1
+winSound.volume=0.1
+loseSound.volume=0.1
 /* logos array */
-
+console.log(speaker)
 let logosArray = [
 
     {
@@ -140,6 +144,7 @@ while(upLogos[i].children[0].src === downLogos[i].children[0].src){
         result.classList.add("won")
         resetBtn.classList.remove("hidden")
         stars.map(item=>item.classList.add("stars"))
+        speaker.classList.add("description-hidden")
         function wow(){
             winSound.play()
         }
@@ -167,6 +172,7 @@ if(count === 0 && !result.classList.contains("won")){
         description.classList.add("hidden")
         result.style.color="red"
         result.textContent="Oops! Try again "
+        speaker.classList.add("description-hidden")
     }, 700); 
     function lose(){
         loseSound.play()
@@ -181,6 +187,8 @@ if(count === 0 && !result.classList.contains("won")){
 
 function playSound(){
     cardsSound.muted= false
+    winSound.muted=false
+    loseSound.muted=false
     play.classList.add("hidden")
     mute.classList.remove("hidden")
 }
@@ -197,3 +205,22 @@ function reset (){
     location.reload()
 }
 
+range.addEventListener("change",function(){
+    const vol = range.value
+    console.log(vol)
+    if(vol==0){
+        muteSound()
+    }
+     if(vol==1){
+        playSound()
+        cardsSound.volume=0.1
+        winSound.volume=0.1
+        loseSound.volume=0.1
+    }
+   if(vol==2){
+        playSound()
+        cardsSound.volume=0.4
+        winSound.volume=0.4
+        loseSound.volume=0.4
+    }
+})

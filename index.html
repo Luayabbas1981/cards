@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>cards</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="brand">
-        <img  src="./imgs/jit.png" alt="">
+      <img src="./imgs/jit.png" alt="" />
     </div>
-    
-    <div class=" logos-con container ">
-        <div class="up-logos-con row d-flex  justify-content-center align-items-center img-fluid svg-fluid">
-          <div class="col-2 d-flex justify-content-center align-items-center" ></div>
-            <div class="col-2 d-flex justify-content-center align-items-center" ></div>
-            <div class="col-2 d-flex justify-content-center align-items-center" ></div>
-            <div class="col-2 d-flex justify-content-center align-items-center" ></div>
-           
-        </div>
+
+    <div class="logos-con container">
+      <div
+        class="up-logos-con row d-flex justify-content-center align-items-center img-fluid svg-fluid"
+      >
+        <div
+          class="col-2 d-flex justify-content-center align-items-center"
+        ></div>
+        <div
+          class="col-2 d-flex justify-content-center align-items-center"
+        ></div>
+        <div
+          class="col-2 d-flex justify-content-center align-items-center"
+        ></div>
+        <div
+          class="col-2 d-flex justify-content-center align-items-center"
+        ></div>
+      </div>
     </div>
-        <div class="down-logos-con">
-            
-            <div ></div>
-            <div ></div>
-            <div ></div>
-            <div ></div>
-      
+    <div class="down-logos-con">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <p class="description">Try to set the both rows in the same order.You have four shots. Good luck!</p>
+    <p class="description">
+      Try to set the both rows in the same order.You have four shots. Good luck!
+    </p>
+
+    <div class="speaker d-flex justify-content-center ">
+      <div class="speaker-btns translate-middle-x-5">
+        <button class="mute"><i class="fa-solid fa-volume-high"></i></button>
+        <button class="play"><i class="fa-solid fa-volume-xmark"></i></button>
+      </div>
+      <div>
+        <input class="range" type="range" min="0" max="2" />
+      </div>
+    </div>
+
     <p class="result"></p>
-    <div class=" counter-starts-con" >
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <div class="counter d-flex justify-content-center align-items-center rounded-3"></div>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+    <div class="counter-starts-con">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <div
+        class="counter d-flex justify-content-center align-items-center rounded-3"
+      ></div>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
     </div>
-   <div class="btns-con mt-4  d-flex gap-5 justify-content-center align-items-center">
-       <button type="button" class="start-btn btn btn-primary " onclick="startGame ()">Play</button>
-       <button type="button" class="reset-btn btn btn-warning " onclick="reset ()">Play again</button>
+    <div
+      class="btns-con mt-4 d-flex gap-5 justify-content-center align-items-center"
+    >
+      <button
+        type="button"
+        class="start-btn btn btn-primary"
+        onclick="startGame ()"
+      >
+        Play
+      </button>
+      <button
+        type="button"
+        class="reset-btn btn btn-warning"
+        onclick="reset ()"
+      >
+        Play again
+      </button>
     </div>
-    <div class="speaker">
-        <button class="mute" onclick="muteSound()"><i class="fa-solid fa-volume-xmark" ></i></button>
-        <button class="play" onclick="playSound()"><i class="fa-solid fa-volume-high"></i></button>
-    </div>
-    <audio class="cards-sound" src="./sounds/cards-sound.mp4"  ></audio>
+
+    <audio class="cards-sound" src="./sounds/cards-sound.mp4"></audio>
     <audio class="win-sound" src="./sounds/win-sound.mp3"></audio>
     <audio class="lose-sound" src="./sounds/lose-sound.mp3"></audio>
-   
-<script src="index.js"></script>
-</body>
+
+    <script src="index.js"></script>
+  </body>
 </html>

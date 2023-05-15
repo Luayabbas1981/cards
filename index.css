@@ -249,19 +249,14 @@ p {
 }
 
 .speaker {
-  position: absolute;
-  top: 20px;
-  left: 30px;
+  opacity: 0;
+  animation: opacity 1s 2.5s linear forwards;
 }
-@media (max-width: 767px) {
-  .speaker {
-    top: 7px;
-    left: 15px;
-  }
+.speaker .speaker-btns {
+  translate: -40px -3px;
 }
 @media (min-width: 1200px) {
   .speaker {
-    left: 10%;
     scale: 1.4;
   }
 }
@@ -272,14 +267,20 @@ p {
   background-color: var(--bg);
 }
 .speaker button:first-child {
-  color: red;
+  color: blue;
 }
 .speaker button:last-child {
-  color: #025fff;
+  color: red;
 }
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 767px) {
+  .description-hidden {
+    margin-top: 60px;
+  }
 }
 
 /* keyframes */

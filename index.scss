@@ -235,15 +235,15 @@ button{
 }
 
 .speaker{
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    @media(max-width: 767px){
-        top: 7px;
-    left: 15px;
-       }
+   opacity: 0 ;
+   animation:opacity 1s 2.5s linear forwards ;
+   
+    .speaker-btns{
+   translate: -40px -3px;
+  }
+  
     @media(min-width:1200px){
-        left: 10%;
+        
         scale: 1.4  ;
     }
     button{
@@ -253,16 +253,23 @@ button{
         background-color:var(--bg);
     }
     button:first-child{
-        color: red;
+        color: blue;
     }
     button:last-child{
-        color: #025fff;
+        color: red;
         
     }
 }
 
 .hidden{
    display: none;
+}
+
+.description-hidden{
+    @media(max-width:767px){
+        
+        margin-top: 60px;
+    }
 }
  
 /* keyframes */
