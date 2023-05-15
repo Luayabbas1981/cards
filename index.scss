@@ -146,9 +146,13 @@ p{
     opacity: 0;
     animation:opacity 1s 2.5s linear forwards ;
     color: #004e73;
-        @media(max-width: 1000px){
+    @media(max-width: 1000px){
           
-          scale: .7;
+        scale: .7;
+      }
+        @media(max-width: 767px){
+          
+          margin-top: -15px;
         }
        
 }
@@ -235,6 +239,7 @@ button{
 }
 
 .speaker{
+    
    opacity: 0 ;
    animation:opacity 1s 2.5s linear forwards ;
    

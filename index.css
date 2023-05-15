@@ -170,6 +170,11 @@ p {
     scale: 0.7;
   }
 }
+@media (max-width: 767px) {
+  p {
+    margin-top: -15px;
+  }
+}
 
 .result {
   font-size: 34px;
