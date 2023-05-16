@@ -15,35 +15,15 @@ body{
     perspective: 500px;
 }
 .brand{
-    position: relative;
-    margin: auto;
-    width: 250px;
-    height: 150px;
+
+    width: 120px;
+    height: 90px;
+    @media(min-width: 767px){
+        width: 200px;
+         height: 130px;   
+     }
    
-    img{
-        width: 100%;
-        height: 100%;
-    }
-    &::after{
-        content: "";
-        position: absolute;
-        bottom: 20%;
-        left: 50%;
-        translate: -50%;
-        width: 100%;
-        height: 20px;
-        background-color:var(--bg);
-        
-    }
-    @media(max-width: 767px){
-        margin: 20px auto auto;
-        width: 140px;
-        height: 90px;
-    }
-    @media(min-width: 800px){
-        margin: 20px auto auto;
-       
-    }
+   
 }
 .logos-con{
    
