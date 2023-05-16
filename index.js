@@ -1,5 +1,5 @@
 const upLogos = Array.from(document.querySelectorAll(".up-logos-con > div")) 
-const downLogos = Array.from(document.querySelectorAll(".down-logos-con > div")) 
+const downLogos = Array.from(document.querySelectorAll(".down-logos-con > .row > div")) 
 const counter = document.querySelector(".counter")
 const startBtn = document.querySelector(".start-btn")
 const resetBtn = document.querySelector(".reset-btn")

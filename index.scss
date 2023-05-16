@@ -26,12 +26,11 @@ body{
    
 }
 .logos-con{
-   
-    height: 35vh;
+    height: 30vh;
     
     @media(max-width: 767px){
        margin-left: 12px;
-        height: 20vh;
+        height: 19vh;
     }
     div{
         height: 100%;
@@ -39,16 +38,13 @@ body{
     }
     .up-logos-con{
 
-        column-gap: 3%;
         animation:up-column-in  1s  ease-out forwards;
-        @media(max-width: 767px){
-            column-gap: 10px;
-         }
-         
+       
         div{
          
             @media(max-width: 767px){
-               width: calc((100% - 40px) / 4);
+               width: calc((100% - 80px) / 4);
+             
             }
             @media  (min-width: 800px)   {
                 width: calc((100% - 200px) / 4);
@@ -76,47 +72,23 @@ body{
 .up-row-spin{
     animation: up-row-spin .3s 8 linear , up-row-position 4s ease-out forwards;
 }
-.down-logos-con{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 6%;
+.down-logos-con {
     
+.row{
     div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 130px;
-        height: 100px;
-        translate: 0 200px;
-        opacity: 0;
-        filter: blur(13px);
-        animation: down-column-come-up 1s 1.2s linear forwards;
-        @media(max-width: 767px){
-            width: 50px;
-        height: 40px;
-        }
-        @media  (min-width: 800px)   {
-           scale: .7;
-          }
-          @media  (min-width:1200px)   {
-            scale: 1;
-           }
-        &:nth-child(4){
+       
+        @media(max-width: 500px){
+            width: 70px;
+         }
+         @media(min-width: 1000px){
+            width: 150px;
+         }
+         @media(min-width: 1400px){
             width: 180px;
-            height:150px ;
-            @media(max-width: 767px){
-                width: 70px;
-                 height: 70px;
-            }
-        }
-        img{
-            width: 100%;
-            height: 100%;
-        }
+         }
     }
-    
+  
+}
 }
 p{
     
@@ -136,11 +108,7 @@ p{
         }
        
 }
-.result{
-    font-size: 34px;
-}
 
-    
 button{
        
         @media(max-width: 767px){
@@ -158,7 +126,7 @@ button{
     opacity: 1;
 }
 .counter-starts-con{
-   position: relative;
+
    width: 300px;
    margin: auto;
    
@@ -189,7 +157,7 @@ button{
    right: 30px;
  }
  .counter{
-    position: relative;
+  
     width: 50px;
     height: 60px;
     margin: auto;
@@ -202,10 +170,7 @@ button{
     @media(max-width: 767px){
         scale: .7;
      }
-     div{
-        position: absolute;
-
-     }
+   
     
 }
 }
